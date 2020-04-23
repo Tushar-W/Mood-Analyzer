@@ -2,6 +2,9 @@ package com.bl.demo;
 
 public class MoodAnalyzer {
     public String analyzeMood(String message){
-        return "SAD";
+        if (message.contains("I am in Sad mood"))
+            return "SAD";
+        else
+            return "HAPPY";
     }
 }
