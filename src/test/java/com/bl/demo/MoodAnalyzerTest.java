@@ -31,7 +31,11 @@ public class MoodAnalyzerTest {
     }
 
     @Test
-    public void givenMood_WhenNull_ShouldReturnHappy() {
+    public void name() {
+    }
+
+    @Test
+    public void givenMood_WhenNull_ShouldReturnThrowException() {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
         String mood = null;
         try {
