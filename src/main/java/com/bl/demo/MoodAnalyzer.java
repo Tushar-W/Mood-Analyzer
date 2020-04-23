@@ -1,5 +1,7 @@
 package com.bl.demo;
 
+import com.bl.demo.exception.MoodAnalysisException;
+
 public class MoodAnalyzer {
     public String message;
 
@@ -7,14 +9,14 @@ public class MoodAnalyzer {
         this.message = message;
     }
 
-    public String analyzeMood(){
+    public String analyzeMood() throws MoodAnalysisException {
         try {
             if (message.contains("I am in Sad mood"))
                 return "SAD";
             else
                 return "HAPPY";
         }catch(NullPointerException e) {
-            return "HAPPY";
+            throw new MoodAnalysisException("Please Enter Proper Mood");
         }
     }
 }
