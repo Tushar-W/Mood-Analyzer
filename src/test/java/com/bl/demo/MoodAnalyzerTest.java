@@ -93,7 +93,6 @@ public class MoodAnalyzerTest {
         Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
     }
 
-
     @Test
     public void givenMoodAnalyzerClassConstructor_WhenNotProper_ShouldReturnThrowException() {
         try {
@@ -102,6 +101,17 @@ public class MoodAnalyzerTest {
         } catch (MoodAnalysisException e) {
             Assert.assertEquals("NO SUCH CLASS ERROR",e.getMessage());
         }
+    }
+
+    @Test
+    public void givenMoodAnalyzerConstructorMethod_WhenNotProper_ShouldReturnThrowException()  {
+        try {
+            MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",Integer.class,"I am in Happy mood");
+            Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
+        } catch (MoodAnalysisException e) {
+            Assert.assertEquals("NO SUCH METHOD ERROR",e.getMessage());
+        }
+
     }
 
 }
