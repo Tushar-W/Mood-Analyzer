@@ -5,6 +5,7 @@ import com.bl.demo.exception.MoodAnalysisException;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import static java.lang.Class.forName;
 
@@ -28,5 +29,15 @@ public class MoodAnalyzerFactory {
             e.printStackTrace();
         }
         return  (MoodAnalyzer) moodObj;
+    }
+
+    public static String invokeMethod(MoodAnalyzer obj, String method) throws IllegalAccessException, InvocationTargetException {
+        Method refMethod = null;
+        try {
+            refMethod = obj.getClass().getDeclaredMethod(method);
+            return (String) refMethod.invoke(obj);
+        } catch (NoSuchMethodException e) {
+            throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.WRONG_METHOD, "NO SUCH METHOD ERROR");
+        }
     }
 }

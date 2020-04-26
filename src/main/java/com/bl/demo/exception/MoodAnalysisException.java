@@ -1,6 +1,6 @@
 package com.bl.demo.exception;
 
-public class MoodAnalysisException extends Exception {
+public class MoodAnalysisException extends RuntimeException {
     public enum Exception_Type {
         ENTERED_NULL,ENTERED_EMPTY,WRONG_CLASS,WRONG_METHOD;
     }
