@@ -1,8 +1,11 @@
 package com.bl.demo;
 
 import com.bl.demo.exception.MoodAnalysisException;
+import com.bl.demo.reflectionclass.MoodAnalyzerFactory;
 import org.junit.Assert;
 import org.junit.Test;
+
+import static java.lang.Class.forName;
 
 public class MoodAnalyzerTest {
     MoodAnalyzer moodAnalyzer;
@@ -54,4 +57,11 @@ public class MoodAnalyzerTest {
             Assert.assertEquals("Mood Is Empty",e.getMessage());
         }
     }
+
+    @Test
+    public void givenMoodAnalyzerClass_WhenProper_ShouldReturnObject() throws MoodAnalysisException {
+        MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",String.class,"I am in Happy mood");
+        Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
+    }
+
 }

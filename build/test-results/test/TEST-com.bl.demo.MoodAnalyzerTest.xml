@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.demo.MoodAnalyzerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-04-24T18:46:21" hostname="DESKTOP-2TJPHRI" time="0.033">
+<testsuite name="com.bl.demo.MoodAnalyzerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-04-26T16:39:52" hostname="DESKTOP-2TJPHRI" time="0.012">
   <properties/>
-  <testcase name="givenMood_WhenAnyMood_ShouldReturnHappy" classname="com.bl.demo.MoodAnalyzerTest" time="0.005"/>
-  <testcase name="givenMood_WhenIsEmpty_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.014"/>
+  <testcase name="givenMood_WhenAnyMood_ShouldReturnHappy" classname="com.bl.demo.MoodAnalyzerTest" time="0.002"/>
+  <testcase name="givenMoodAnalyzerClass_WhenProper_ShouldReturnObject" classname="com.bl.demo.MoodAnalyzerTest" time="0.001"/>
+  <testcase name="givenMood_WhenIsEmpty_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.002"/>
   <testcase name="givenMood_WhenIsNull_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.0"/>
-  <testcase name="givenMood_WhenSadPassThroughConstructor_ShouldReturnSad" classname="com.bl.demo.MoodAnalyzerTest" time="0.001"/>
+  <testcase name="givenMood_WhenSadPassThroughConstructor_ShouldReturnSad" classname="com.bl.demo.MoodAnalyzerTest" time="0.0"/>
   <testcase name="givenMood_WhenSad_ShouldReturnSad" classname="com.bl.demo.MoodAnalyzerTest" time="0.0"/>
   <testcase name="givenMood_WhenHappyPassThroughConstructor_ShouldReturnHappy" classname="com.bl.demo.MoodAnalyzerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

@@ -2,6 +2,7 @@ package com.bl.demo;
 
 import com.bl.demo.exception.MoodAnalysisException;
 
+
 public class MoodAnalyzer {
     public String message;
 
@@ -13,6 +14,11 @@ public class MoodAnalyzer {
     }
 
     public String analyzeMood(String  message) throws MoodAnalysisException {
+        this.message = message;
+        return analyzeMood();
+    }
+
+    public String analyzeMood() throws MoodAnalysisException {
         try {
             if (message.equals(""))
                 throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.ENTERED_EMPTY,"Mood Is Empty");
@@ -25,7 +31,12 @@ public class MoodAnalyzer {
         }
     }
 
-    public String analyzeMood() throws MoodAnalysisException {
-        return this.analyzeMood(message);
+    @Override
+    public boolean equals(Object anotherObj) {
+        MoodAnalyzer moodObj = (MoodAnalyzer)anotherObj;
+        if (this.message == moodObj.message) {
+            return true;
+        }
+        return false;
     }
 }
