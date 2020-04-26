@@ -31,13 +31,18 @@ public class MoodAnalyzerFactory {
         return  (MoodAnalyzer) moodObj;
     }
 
-    public static String invokeMethod(MoodAnalyzer obj, String method) throws IllegalAccessException, InvocationTargetException {
+    public static String invokeMethod(MoodAnalyzer obj, String method) {
         Method refMethod = null;
         try {
             refMethod = obj.getClass().getDeclaredMethod(method);
             return (String) refMethod.invoke(obj);
         } catch (NoSuchMethodException e) {
             throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.WRONG_METHOD, "NO SUCH METHOD ERROR");
+        }catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 }

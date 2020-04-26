@@ -124,4 +124,18 @@ public class MoodAnalyzerTest {
         Assert.assertEquals("HAPPY",mood);
 
     }
+
+    @Test
+    public void givenHappyMessage_WhenImProper_ShouldReturnThrowException() {
+        try {
+            MoodAnalyzer obj = createMoodAnalyzer("com.bl.demo.MoodAnalyzer",String.class,"I am in Happy mood");
+            String mood = MoodAnalyzerFactory.invokeMethod(obj,"analyzeMood");
+            Assert.assertEquals("HAPPY",mood);
+        } catch (MoodAnalysisException e) {
+            Assert.assertEquals("NO SUCH METHOD ERROR",e.getMessage());
+
+        }
+
+
+    }
 }
