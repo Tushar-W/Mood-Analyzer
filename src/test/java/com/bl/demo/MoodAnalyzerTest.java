@@ -58,6 +58,7 @@ public class MoodAnalyzerTest {
         }
     }
 
+    //Default Constructor
     @Test
     public void givenMoodAnalyzerClass_WhenProper_ShouldReturnObject() throws MoodAnalysisException {
         MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",String.class,null);
@@ -84,4 +85,12 @@ public class MoodAnalyzerTest {
         }
 
     }
+
+    //Parameter Constructor
+    @Test
+    public void givenMoodAnalyzerClassConstructor_WhenProper_ShouldReturnObject() throws MoodAnalysisException {
+        MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",String.class,"I am in Happy mood");
+        Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
+    }
+
 }
