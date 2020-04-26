@@ -60,27 +60,27 @@ public class MoodAnalyzerTest {
 
     @Test
     public void givenMoodAnalyzerClass_WhenProper_ShouldReturnObject() throws MoodAnalysisException {
-        MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",String.class,"I am in Happy mood");
-        Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
+        MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",String.class,null);
+        Assert.assertEquals(new MoodAnalyzer(),obj);
     }
 
     @Test
     public void givenMoodAnalyzerClass_WhenNotProper_ShouldReturnThrowException() {
         try {
-            MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.Mood",String.class,"I am in Happy mood");
-            Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
+            MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.Mood",String.class,null);
+            Assert.assertEquals(new MoodAnalyzer(),obj);
         } catch (MoodAnalysisException e) {
-            Assert.assertEquals("NO SUCH CLASS",e.getMessage());
+            Assert.assertEquals("NO SUCH CLASS ERROR",e.getMessage());
         }
     }
 
     @Test
     public void givenMoodAnalyzerMethod_WhenNotProper_ShouldReturnThrowException()  {
         try {
-            MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",Integer.class,"I am in Happy mood");
-            Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
+            MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",Integer.class,null);
+            Assert.assertEquals(new MoodAnalyzer(),obj);
         } catch (MoodAnalysisException e) {
-            Assert.assertEquals("NO SUCH METHOD",e.getMessage());
+            Assert.assertEquals("NO SUCH METHOD ERROR",e.getMessage());
         }
 
     }
