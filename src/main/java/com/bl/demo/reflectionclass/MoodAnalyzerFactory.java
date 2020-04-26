@@ -17,9 +17,9 @@ public class MoodAnalyzerFactory {
             moodObj = moodConstructor.newInstance(message);
         }
         catch (ClassNotFoundException e) {
-            throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.WRONG_CLASS,"NO SUCH CLASS");
+            throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.WRONG_CLASS,"NO SUCH CLASS ERROR");
         } catch (NoSuchMethodException e) {
-            throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.WRONG_CLASS,"NO SUCH METHOD");
+            throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.WRONG_METHOD,"NO SUCH METHOD ERROR");
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {

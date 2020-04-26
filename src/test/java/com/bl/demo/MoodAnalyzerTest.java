@@ -70,7 +70,7 @@ public class MoodAnalyzerTest {
             MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.Mood",String.class,"I am in Happy mood");
             Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
         } catch (MoodAnalysisException e) {
-            Assert.assertEquals("NO SUCH CLASS",e.getMessage());
+            Assert.assertEquals("NO SUCH CLASS ERROR",e.getMessage());
         }
     }
 
@@ -80,7 +80,7 @@ public class MoodAnalyzerTest {
             MoodAnalyzer obj = MoodAnalyzerFactory.createMoodAnalyzer("com.bl.demo.MoodAnalyzer",Integer.class,"I am in Happy mood");
             Assert.assertEquals(new MoodAnalyzer("I am in Happy mood"),obj);
         } catch (MoodAnalysisException e) {
-            Assert.assertEquals("NO SUCH METHOD",e.getMessage());
+            Assert.assertEquals("NO SUCH METHOD ERROR",e.getMessage());
         }
 
     }
