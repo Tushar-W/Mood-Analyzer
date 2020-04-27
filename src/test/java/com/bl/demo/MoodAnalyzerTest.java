@@ -144,4 +144,17 @@ public class MoodAnalyzerTest {
         MoodAnalyzerFactory.fieldChangeDynamically(obj,"message","I am in Happy Mood");
         Assert.assertEquals("HAPPY",mood);
     }
+
+    @Test
+    public void givenFieldName_WhenImProper_ShouldReturnMood() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        try{
+            MoodAnalyzer obj = createMoodAnalyzer("com.bl.demo.MoodAnalyzer",String.class,"I am in Happy mood");
+            String mood = MoodAnalyzerFactory.invokeMethod(obj,"analyzeMood");
+            MoodAnalyzerFactory.fieldChangeDynamically(obj,"","I am in Happy Mood");
+            Assert.assertEquals("HAPPY",mood);
+        }catch (MoodAnalysisException e) {
+            Assert.assertEquals("NO SUCH FIELD ERROR",e.getMessage());
+        }
+
+    }
 }

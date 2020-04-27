@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bl.demo.MoodAnalyzerTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2020-04-27T00:19:44" hostname="DESKTOP-2TJPHRI" time="0.06">
+<testsuite name="com.bl.demo.MoodAnalyzerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-27T00:27:25" hostname="DESKTOP-2TJPHRI" time="0.003">
   <properties/>
-  <testcase name="givenMoodAnalyzerConstructorMethod_WhenNotProper_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.004"/>
-  <testcase name="givenFieldName_WhenProper_ShouldReturnMood" classname="com.bl.demo.MoodAnalyzerTest" time="0.007"/>
-  <testcase name="givenMoodAnalyzerClassConstructor_WhenProper_ShouldReturnObject" classname="com.bl.demo.MoodAnalyzerTest" time="0.001"/>
-  <testcase name="givenMood_WhenAnyMood_ShouldReturnHappy" classname="com.bl.demo.MoodAnalyzerTest" time="0.001"/>
-  <testcase name="givenMoodAnalyzerClass_WhenNotProper_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.002"/>
-  <testcase name="givenMoodAnalyzerClassConstructor_WhenNotProper_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.002"/>
-  <testcase name="givenMoodAnalyzerClass_WhenProper_ShouldReturnObject" classname="com.bl.demo.MoodAnalyzerTest" time="0.003"/>
-  <testcase name="givenHappyMessage_WhenProper_ShouldReturnHappyMood" classname="com.bl.demo.MoodAnalyzerTest" time="0.005"/>
-  <testcase name="givenHappyMessage_WhenImProper_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.005"/>
-  <testcase name="givenMood_WhenIsEmpty_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.0"/>
-  <testcase name="givenMood_WhenIsNull_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.0"/>
-  <testcase name="givenMood_WhenSadPassThroughConstructor_ShouldReturnSad" classname="com.bl.demo.MoodAnalyzerTest" time="0.001"/>
-  <testcase name="givenMoodAnalyzerMethod_WhenNotProper_ShouldReturnThrowException" classname="com.bl.demo.MoodAnalyzerTest" time="0.001"/>
-  <testcase name="givenMood_WhenSad_ShouldReturnSad" classname="com.bl.demo.MoodAnalyzerTest" time="0.0"/>
-  <testcase name="givenMood_WhenHappyPassThroughConstructor_ShouldReturnHappy" classname="com.bl.demo.MoodAnalyzerTest" time="0.0"/>
+  <testcase name="givenFieldName_WhenImProper_ShouldReturnMood" classname="com.bl.demo.MoodAnalyzerTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
