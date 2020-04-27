@@ -4,6 +4,7 @@ import com.bl.demo.MoodAnalyzer;
 import com.bl.demo.exception.MoodAnalysisException;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -44,5 +45,16 @@ public class MoodAnalyzerFactory {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void fieldChangeDynamically(MoodAnalyzer obj,String varName, String method) {
+        try {
+            Field field = obj.getClass().getDeclaredField(varName);
+            field.set(obj,varName);
+        } catch (NoSuchFieldException e) {
+            throw new MoodAnalysisException(MoodAnalysisException.Exception_Type.WRONG_FIELD,"NO SUCH FIELD ERROR");
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
